@@ -27,3 +27,7 @@ The raw dataset is in CSV format, which is extracted from Kaggle.
 
 ### Step 6: Display the findings to the front-end using React 
 
+# Set up 
+## Create the virtual environment 
+    1. virtualenv mypython
+    2. source mypython/bin/activate
