@@ -1,7 +1,6 @@
 import pandas as pd
 df = pd.read_csv('investments_VC.csv', encoding='unicode_escape')
 
-
 # Data columns (total 39 columns):
 #  #   Column                Non-Null Count  Dtype  
 # ---  ------                --------------  -----  
@@ -46,3 +45,59 @@ df = pd.read_csv('investments_VC.csv', encoding='unicode_escape')
 #  38  round_H               49438 non-null  int64  
 # dtypes: float64(1), int64(22), object(16)
 # memory usage: 14.7+ MB
+
+
+# DETECT MISSING VALUES  
+Missing_values_in_every_column = df.isnull().sum()
+
+# permalink                   0
+# name                        1
+# homepage_url             3449
+# category_list            3961
+#  market                  3968
+#  funding_total_usd          0
+# status                   1314
+# country_code             5273
+# state_code              19277
+# region                   5273
+# city                     6116
+# funding_rounds              0
+# founded_at              10884
+# founded_month           10956
+# founded_quarter         10956
+# founded_year            10956
+# first_funding_at            0
+# last_funding_at             0
+# seed                        0
+# venture                     0
+# equity_crowdfunding         0
+# undisclosed                 0
+# convertible_note            0
+# debt_financing              0
+# angel                       0
+# grant                       0
+# private_equity              0
+# post_ipo_equity             0
+# post_ipo_debt               0
+# secondary_market            0
+# product_crowdfunding        0
+# round_A                     0
+# round_B                     0
+# round_C                     0
+# round_D                     0
+# round_E                     0
+# round_F                     0
+# round_G                     0
+# round_H                     0
+# dtype: int64
+
+Total_missing_values = df.isnull().sum().sum()
+print(Total_missing_values) #Total missing values in the entire dataset is 92384 
+
+
+
+
+
+
+
+
