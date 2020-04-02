@@ -47,7 +47,7 @@ df = pd.read_csv('investments_VC.csv', encoding='unicode_escape')
 # memory usage: 14.7+ MB
 
 
-# DETECT MISSING VALUES  
+""" DETECT MISSING VALUES """ 
 Missing_values_in_every_column = df.isnull().sum()
 
 # permalink                   0
@@ -92,9 +92,18 @@ Missing_values_in_every_column = df.isnull().sum()
 # dtype: int64
 
 Total_missing_values = df.isnull().sum().sum()
-print(Total_missing_values) #Total missing values in the entire dataset is 92384 
+# print(Total_missing_values) 
+#Total missing values in the entire dataset is 92384 
 
 
+"""Filter the missing values using dropna"""
+old_df = df.shape  # The original dataset has 49438 rows and 39 columns 
+
+new_df = df.dropna()
+result_new_df = new_df.shape 
+
+# After the dropt the column has missiing value. 
+ # The result is 21840 rows and 9 columns 
 
 
 
