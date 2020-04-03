@@ -102,8 +102,7 @@ old_df = df.shape  # The original dataset has 49438 rows and 39 columns
 new_df = df.dropna()
 result_new_df = new_df.shape 
 
-# After the dropt the column has missiing value. 
- # The result is 21840 rows and 9 columns 
+# After the dropna the column has missing value. The new dataset has 21840 rows and 9 columns 
 
 
 
