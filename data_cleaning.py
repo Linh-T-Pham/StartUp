@@ -100,9 +100,16 @@ Total_missing_values = df.isnull().sum().sum()
 old_df = df.shape  # The original dataset has 49438 rows and 39 columns 
 
 new_df = df.dropna()
-result_new_df = new_df.shape 
+result_new_df = new_df.shape # After using the dropna to drop the columns, which have missing values. 
+                             # The new dataset has 21840 rows and 9 columns 
 
-# After the dropna the column has missing value. The new dataset has 21840 rows and 9 columns 
+""""Drop columns in the new dataset"""
+
+new_df.drop(['permalink','category_list','founded_quarter','state_code', 'region','seed', 'venture', 'equity_crowdfunding',
+       'undisclosed', 'convertible_note', 'debt_financing', 'angel', 'grant',
+       'private_equity', 'post_ipo_equity', 'post_ipo_debt',
+       'secondary_market', 'product_crowdfunding', 'round_A', 'round_B',
+       'round_C', 'round_D', 'round_E', 'round_F', 'round_G', 'round_H'], axis=1, inplace = True)
 
 
 
